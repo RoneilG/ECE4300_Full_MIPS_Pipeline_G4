@@ -51,7 +51,7 @@ module data_memory (
         $display("\n\n\tChanges to Data Memory:");
        end
        
-    always@(posedge clk or negedge rst) begin
+    always@(negedge clk or negedge rst) begin
         if (!rst) begin
             read_data <= 32'b0;
         end
@@ -68,4 +68,5 @@ module data_memory (
         end
     end
     
+
 endmodule
