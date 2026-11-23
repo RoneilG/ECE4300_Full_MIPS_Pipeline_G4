@@ -19,7 +19,7 @@ module instrMem(
         $display("\IMEM[%0d] = %032b", i, register[i]);
     end
 
-	always @ (posedge clk or negedge rst) begin
+	always @ (negedge clk or negedge rst) begin
 		if (!rst)
 		  data <= 32'h0;
 		else
